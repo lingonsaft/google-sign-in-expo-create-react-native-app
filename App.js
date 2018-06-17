@@ -1,6 +1,5 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
-import { androidClientId } from "./superSecretKey"
 import Expo from "expo"
 
 export default class App extends React.Component {
@@ -15,7 +14,9 @@ export default class App extends React.Component {
   signIn = async () => {
     try {
       const result = await Expo.Google.logInAsync({
-        androidClientId: androidClientId,
+        androidClientId:
+          "833456763323-ig9ndr0tbvb62jv4ddn6j8pos3a49m35.apps.googleusercontent.com",
+        //iosClientId: YOUR_CLIENT_ID_HERE,  <-- if you use iOS
         scopes: ["profile", "email"]
       })
 
